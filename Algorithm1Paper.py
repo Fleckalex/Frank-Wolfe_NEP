@@ -13,7 +13,8 @@ from scipy import optimize  as op
 def f(x):
     '''
     
-    Objective function 
+    Objective function
+    f(x)=(1/2)*||Ax-b||^2
 
     Parameters
     ----------
@@ -188,7 +189,6 @@ Sizes=[1/(i+2) for i in range(How_many)]
 Numbers=[i for i in range(How_many)]
 
 Beta=np.linalg.eigh(np.matmul(A,A.T))[0][-1]
-#Vertices=
 ###############################################################3
 # Result1=Frank_Wolfe_NEP(V0,Vertices,Beta, Sizes)
 # Iterations=Result1[1]
